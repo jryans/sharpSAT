@@ -841,6 +841,16 @@ void Solver::printOnlineStats() {
 
 	cout << endl;
 	cout << "time elapsed: " << stopwatch_.getElapsedSeconds() << "s" << endl;
+
+	cout << "stack size \t" << stack_.size() << endl;
+
+	mpz_class totalModels = 0;
+	for (const auto &item : stack_)
+	{
+		totalModels += item.getTotalModelCount();
+	}
+	cout << "models \t" << totalModels << endl;
+
 	if(config_.verbose) {
 	  cout << "conflict clauses (all / bin / unit) \t";
 	  cout << num_conflict_clauses();
