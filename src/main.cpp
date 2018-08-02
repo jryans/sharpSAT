@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
       }
       theSolver.config().time_bound_seconds = atol(argv[i + 1]);
       if (theSolver.config().verbose)
-        cout << "time bound set to" << theSolver.config().time_bound_seconds << "s\n";
+        cout << "time bound set to " << theSolver.config().time_bound_seconds << "s\n";
      } else if (strcmp(argv[i], "-cs") == 0) {
       if (argc <= i + 1) {
         cout << " wrong parameters" << endl;
