@@ -11,7 +11,7 @@
 
 
 StopWatch::StopWatch() {
-  interval_length_.tv_sec = 60;
+  interval_length_.tv_sec = 30;
   gettimeofday(&last_interval_start_, NULL);
   start_time_ = stop_time_ = last_interval_start_;
 }
