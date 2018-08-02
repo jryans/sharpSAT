@@ -129,6 +129,7 @@ void Solver::HardWireAndCompact() {
 }
 
 void Solver::solve(const string &file_name) {
+	stopwatch_.setTimeBound(config_.time_bound_seconds);
 	stopwatch_.start();
 	statistics_.input_file_ = file_name;
 
